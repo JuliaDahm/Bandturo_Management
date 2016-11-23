@@ -1,0 +1,17 @@
+<body id="customer-index">
+  <div class="container header align-center center">
+    <h1><a href="#" class="logo">Bandturo</a></h1>
+    <p>Tour Booking for Independent Musicians</p>
+  </div>
+  <div class="top-cushion container center">
+    <h5>Artists/Bands</h5>
+    <hr />
+    <div class="row">
+      <% @customers.each do |c| %>
+        <div class="band_links col s4 l4 offset-by-6">
+          <p><%= link_to "#{c.band_name.upcase}", customer_path(c) %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</body>

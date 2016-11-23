@@ -1,0 +1,17 @@
+@import "materialize";
+@import "welcome";
+@import "customers";
+@import "onesheet";
+
+#customer-index, #customer-show, #thanks, #welcome-index {
+  background-color: #fff;  
+}
+
+.container {
+  width: 75%;
+}
+
+.header {
+  width: 100%;
+}
+

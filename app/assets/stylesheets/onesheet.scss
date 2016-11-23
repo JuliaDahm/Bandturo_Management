@@ -1,0 +1,96 @@
+@import "materialize";
+
+
+//**************Permanent*************//
+
+
+
+//*************Free to change*********//
+
+
+// Background//
+
+#onesheet {
+  background-color: #c9e0ec;
+}
+
+// Row //
+
+
+// Logo //
+
+.one-sheet-logo,
+.one-sheet-sounds-like {
+  margin-top: 30px;
+}
+
+.one-sheet-logo {
+}
+
+
+// Main Photo//
+
+#onesheet .one-sheet-main-photo {
+  padding: 0;
+}
+
+#onesheet .one-sheet-main-photo img {
+  padding: 0;
+  margin: 0;
+}
+
+// Sounds Like //
+
+
+.one-sheet-sounds-like h5 {
+  text-decoration: underline;
+  padding-top: 80px;
+}
+
+.one-sheet-sounds-like h5,
+.one-sheet-sounds-like li {
+  text-align: center;
+}
+
+
+// Side Photos //
+
+#onesheet .side-photos {
+}
+
+// Misc Photo 1 //
+
+#misc_photo1 {
+  padding-top: 30px;
+}
+
+// Misc Photo 2 (Bottom Left) //
+
+#onesheet .one-sheet-misc-2 {
+  align-content: center;
+  padding-right: 0;
+}
+
+// Press Links //
+
+#onesheet .one-sheet-press-links {
+  background-color: #dbdbdb;
+  height: 150px;
+  padding: 0;
+}
+
+#onesheet .press-links-row {
+  padding-left: 40px;
+}
+
+// Icons //
+
+#onesheet .one-sheet-icons {
+  padding: 0;
+}
+
+#onesheet .one-sheet-icon {
+  padding: 0;
+}
+
+

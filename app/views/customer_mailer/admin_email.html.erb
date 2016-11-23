@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Martin, <%= @customer.band_name.capitalize %> just submitted their form.</h3>
+    <br />
+    <p>Check it out here: <%= link_to "#{@customer.band_name} Form", customer_url(@customer) %></p>
+  </body>
+</html>

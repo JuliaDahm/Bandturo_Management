@@ -1,0 +1,295 @@
+<%= form_for(Customer.new, url: customers_path) do |f| %>
+  <div class="row">
+    <div class="input-field col s12 l12">
+      <%= f.label :band_name %>
+      <%= f.text_field :band_name, placeholder: "Artist/Band Name", class: "validate"  %>
+    </div>
+  </div> 
+  <div class="row">
+    <div class="input-field col s12 l6">
+      <%= f.label :address1 %>
+      <%= f.text_field :address1, placeholder: "Street Address", class: "validate"  %>
+    </div>
+    <div class="input-field col s12 l6">
+      <%= f.label :address2 %>
+      <%= f.text_field :address2, placeholder: "Address Line 2", class: "validate" %>
+    </div>
+  </div> 
+  <div class="row">
+    <div class="input-field col s12 l6">
+      <%= f.label :city %>
+      <%= f.text_field :city, placeholder: "City", class: "validate"  %>
+    </div>
+    <div class="input-field col s12 l6">
+      <%= f.label :state %>
+      <%= f.text_field :state, placeholder: "State/Region", class: "validate"  %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12 l6">
+      <%= f.label :zip %>
+      <%= f.text_field :zip, placeholder: "Postal/Zip Code", class: "validate" %>
+    </div>
+    <div class="input-field col s12 l6">
+      <%= f.label :country %>
+      <%= f.text_field :country, placeholder: "Country", class: "validate" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12 l6">
+      <%= f.label :phone %>
+      <%= f.text_field :phone, placeholder: "Phone", class: "validate"  %>
+    </div>
+    <div class="input-field col s12 l6">
+      <%= f.label :email %>
+      <%= f.text_field :email, placeholder: "Email", class: "validate" %>
+    </div>
+  </div>
+  <div class="row form-labels">
+    <div class="input-field col s12 l6">
+      <p>Departure Date (Tentative)</p>
+      <%= f.date_field :depart, class: "validate datepicker" %> 
+      <p class="form-descriptions">What date do you plan on leaving?
+      It's often a good idea to play your home base as a send-off show for a chunk of road money headed out.</p>
+    </div> 
+    <div class="input-field col s12 l6">
+      <p>Return Date</p>
+      <%= f.date_field :return, class: "validate datepicker" %>
+      <p class="form-descriptions">When do you plan on returning to the "real world?"</p>
+    </div>
+  </div>
+  <div class="row form-labels">
+    <div class="input-field col s12 l12">
+      <p>Importance: Money</p>
+        <p class="range-field">
+          <%= f.range_field :money, action: "#", class: "validate", in: 1..10%>
+        </p>
+      <p class="form-descriptions">How much are you in it for the money?</p>
+    </div>
+    <div class="input-field col s12 l12">
+      <p>Importance: Experience</p>
+        <p class="range-field">
+          <%= f.range_field :experience, action: "#", class: "validate", in: 1..10 %>
+        </p>
+      <p class="form-descriptions">How much are you in it for the experience?</p>
+    </div>
+  </div>
+  <div class="row"></div>
+  <div class="lower-row row">
+    <div class="input-field col s12 l4">
+      <%= f.label :website %>
+      <%= f.url_field :website, placeholder: "https://YourBandHere.com" %>
+    </div>
+    <div class="input-field col s12 l4">
+      <%= f.label :soundcloud %>
+      <%= f.url_field :soundcloud, placeholder: "https://Soundcloud.com/...." %>
+    </div>
+    <div class="input-field col s12 l4">
+      <%= f.label :youtube %>
+      <%= f.url_field :youtube, placeholder: "https://Youtube.com/user/..." %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12 l6">
+      <%= f.label :bandcamp %>
+      <%= f.url_field :bandcamp, placeholder: "https://YourBand.Bandcamp.com" %>
+    </div>
+    <div class="input-field col s12 l6">
+      <%= f.label :other_site %>
+      <%= f.url_field :other_site, placeholder: "Other Music Websites" %>
+    </div>
+  </div>
+  <div class="row"></div>
+  <div class="lower-row lift-row-bottom row form-labels">
+    <div class="input-field col s12 l12">
+      <p>Artist Bio</p>
+      <%= f.text_area :artist_bio, class:"validate"%>
+      <p class="form-descriptions">An artist bio should be a compelling narrative. If you have one that's great. If you don't, that's fine too. We can put a good one together for you.</p>
+    </div>
+  </div>
+  <div class="lower-row lift-row-bottom row form-labels">
+    <div class="input-field col s12 l6">
+      <p>Sounds Like</p>
+      <%= f.text_field :sounds_like1, class: "validate" %>
+      <%= f.text_field :sounds_like2, class: "validate" %>
+      <%= f.text_field :sounds_like3, class: "validate" %>
+      <p class="form-descriptions">The "sounds like" section helps talent buyers to sort through prospective acts. 
+      The more accurate and popular, the better.
+      Compare the "sound" of your music to other popular, relevant acts (E.g. Aesop Rock, Why?, Brand New, etc.)</p> 
+    </div>
+    <div class="input-field col s12 l6">
+      <p>Press Links</p>
+      <%= f.text_field :press_link1, class: "validate" %>
+      <%= f.text_field :press_link2, class: "validate" %>
+      <%= f.text_field :press_link3, class: "validate" %>
+      <p class="form-descriptions">Got any coverage on your band or of a show by the local newspaper or alternative magazine? It's great stuff for landing gigs out of town.</p>
+    </div>
+  </div>
+  <div class="row lower-row"></div>
+  <div class="lower-row file-field input-field col s12 l12">
+    <div class="btn file-button">
+      <span>File</span>
+      <%= f.file_field :main_photo %>
+    </div>
+    <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder= "Upload an image that represents your band.">
+    </div>
+  </div>
+
+  <div class="lower-row file-field input-field col s12 l12">
+    <div class="btn file-button">
+      <span>File</span>
+      <%= f.file_field :live_photo %>
+    </div>
+    <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder = "An exciting shot of your band playing live.">
+    </div>
+  </div>
+
+  <div class="lower-row file-field input-field col s12 l12">
+    <div class="btn file-button">
+      <span>File</span>
+      <%= f.file_field :logo %>
+    </div>
+    <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder= "Hi-res artist/band logo." >
+    </div>
+  </div>
+
+  <div class="lower-row file-field input-field col s12 l12">
+    <div class="btn file-button">
+      <span>File</span>
+      <%= f.file_field :misc_photo1 %>
+    </div>
+    <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder= "Album/EP cover art or anything else...">
+    </div>
+  </div>
+
+  <div class="file-field input-field col s12 l12">
+    <div class="btn file-button">
+      <span>File</span>
+      <%= f.file_field :misc_photo2 %>
+    </div>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text" placeholder= "Anything else...">
+    </div>
+  </div>
+
+  <div class="row"></div>
+  <div class="row lower-row">
+    <div class="col s12 l6">
+      <p>Are you interested in using Bandturo to contact local press on your behalf in each city you visit for $ .99/city?</p>
+    </div>
+    <div name="press-interest" class="browser-select col s12 l6">
+      <%= f.select :press_interest, ['Yes', 'No', 'Maybe'], class: "browser-select" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12 l6">
+      <p>Are you interested in using Bandturo to design, print, and ship your tour posters for $5/city?</p>
+    </div>
+    <div class="input-field col s12 l6">
+      <%= f.select :poster_interest, ['Yes', 'No', 'Maybe']%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12 l6">
+      <p>Are you interested in using Bandturo to generate Facebook event pages on your behalf in each city you vifor $.99/city?</p>
+    </div>
+    <div name="fb-event-interest" class="input-field col s12 l6">
+      <%= f.select :event_interest, ['Yes', 'No', 'Maybe']%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12 l6">
+      <p>Are you interested in using Bandturo to create, target, purchase and implement social media advertisement on your behalf for $20/city?</p>
+    </div>
+    <div class="input-field col s12 l6">
+      <%= f.select :advert_interest, ['Yes', 'No', 'Maybe']%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12 l6">
+      <p>What products/services are you currently interested in?</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s3 l3">
+      <%= f.check_box(:products_photos) %> 
+      <%= f.label(:products_photos, "Artist/Band Photos") %>
+    </div>
+    <div class="col s3 l3">
+      <%= f.check_box(:products_posters) %> 
+      <%= f.label(:products_posters, "Tour Posters") %>
+    </div>
+    <div class="col s3 l3">
+      <%= f.check_box(:products_recording) %>
+      <%= f.label(:products_recording, "Affordable recording services") %>
+    </div>
+    <div class="col s3 l3">
+      <%= f.check_box(:products_mastering) %>
+      <%= f.label(:products_mastering, "Mastering") %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s3 l3">
+      <%= f.check_box(:products_live_equipment) %>
+      <%= f.label(:products_live_equipment, "Live audio equipment") %>
+    </div>
+    <div class="col s3 l3">
+      <%= f.check_box(:products_loan) %>
+      <%= f.label(:products_loan, "Loan/Credit card") %>
+    </div>
+    <div class="col s3 l3">
+      <%= f.check_box(:products_video) %>
+      <%= f.label(:products_video, "Music video") %>
+    </div>
+    <div class="col s3 l3">
+      <%= f.check_box(:products_mixing) %>
+      <%= f.label(:products_mixing, "Mixing") %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s3 l3">
+      <%= f.check_box(:products_workshops) %>
+      <%= f.label(:products_workshops, "How-to workshops") %>
+    </div>
+    <div class="col s3 l3">
+      <%= f.check_box(:products_studio_equipment) %>
+      <%= f.label(:products_studio_equipment, "Studio/Recording equipment") %>
+    </div>
+    <div class="col s3 l3">
+      <%= f.check_box(:products_tickets) %>
+      <%= f.label(:products_tickets, "Selling tickets via smart phone") %>
+    </div>
+  </div>
+  <div class="lower-row row form-labels">
+    <div class="input-field col s12 l12">
+      <p>Routing</p>
+      <%= f.text_field :routing, class: "validate"%>
+      <p class="form-descriptions">What are your goals for this tour? Regional? National? Coastal? Coast-to-coast</p>
+    </div>
+  </div>
+  <div class="lower-row row form-labels">
+    <div class="input-field col s12 l12">
+      <p>Other Info</p>
+      <%= f.text_field :other_info, class: "validate" %>
+      <p class="form-descriptions">Got anything else? Use this space to tell us any other information you feel is useful, or interesting links that have to do with your band. This is also the place for you to submit the route you designed for yourself, and to list your contacts.</p>
+    </div>
+  </div>
+  <div class="lower-row row form-labels">
+    <div class="input-field col s12 l12">
+      <p>Refer a Friend</p>
+      <%= f.text_field :referral, class: "validate" %>
+      <p class="form-descriptions">Refer a friend (or enemy) to Bandturo if you think they could use it to help the cause of spreading more music across the planet.</p>
+    </div>
+  </div>       
+  <div class="center">
+    <button class="btn waves-effect waves-light" type="submit" name="action">
+      <%= f.submit "Submit", class: "center material-icons right" %>
+    </button>
+  </div>
+<% end %>
+
+

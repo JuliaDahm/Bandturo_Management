@@ -1,0 +1,3 @@
+Martin, <%= @customer.band_name.capitalize %> just submitted their form.
+
+Check it out here: <%= link_to("#{@customer.band_name.capitalize} Form", customer_path(@customer)) %>

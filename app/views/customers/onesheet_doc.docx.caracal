@@ -1,0 +1,82 @@
+logo = image_url(@customer.logo)
+main_photo = image_url(@customer.main_photo)
+c0 = Caracal::Core::Models::TableCellModel.new margins: {top: 10.0, bottom: 4.0, left: 6.0, right: 6.0} do
+  img logo, width: 150, height: 100
+  img main_photo, width: 330, height: 180, align: 'center'
+end
+
+docx.table [[c0]] do 
+  cell_style cells, width: 8000, align: 'center'
+end
+
+live_photo = image_url(@customer.live_photo)
+misc_photo1 = image_url(@customer.misc_photo1)
+c1 = Caracal::Core::Models::TableCellModel.new do
+  img live_photo, width: 150, height: 100
+  img misc_photo1, width: 150, height: 100
+end
+
+row1 = ['Sounds Like']
+row2 = ["#{@customer.sounds_like1}"]
+row3 = ["#{@customer.sounds_like2}"]
+row4 = ["#{@customer.sounds_like3}"]
+docx.table [row1.dup, row2.dup, row3.dup, row4.dup, [c1]] do
+  cell_style rows[0],  bold: true, size: 26, style: 'special'
+  cell_style rows[1], size: 20
+  cell_style rows[2], size: 20
+  cell_style rows[3], size: 20
+  cell_style rows,     align: 'center'
+end
+     
+docx.p @customer.artist_bio, align: 'center'
+
+misc_photo2 = image_url(@customer.misc_photo2)
+c2 = Caracal::Core::Models::TableCellModel.new  margins: { top: 0, bottom: 0, left: 200, right: 900 } do
+  img misc_photo2, width: 140, height: 100
+end
+
+news = image_url('news-icon.png')
+row1 = @customer.press_link1
+row2 = @customer.press_link2
+row3 = @customer.press_link3
+c3 = Caracal::Core::Models::TableCellModel.new margins: { top: 0, bottom: 0, left: 200, right: 200 } do
+  img news, width: 50, height: 30, margin: 0
+  ul do
+    li "#{row1}", align: 'center'
+    li "#{row2}", align: 'center'
+    li "#{row3}", align: 'center'
+  end 
+end
+
+soundcloud = image_url('soundcloud-icon.png')
+bandcamp = image_url('bandcamp-icon.png')
+c4 = Caracal::Core::Models::TableCellModel.new margins: { top: 0, bottom: 0, left: 0, right: 0 } do
+  img soundcloud, width: 40, height: 40, margins: {top: 0, bottom: 0, left: 200, right: 0}
+  img bandcamp, width: 40, height: 40, margins: {top: 0, bottom: 0, left: 200, right: 0}
+end
+
+youtube = image_url('youtube-icon.png')
+other_site = image_url('other-site-icon.png')
+c5 = Caracal::Core::Models::TableCellModel.new margins: { top: 0, bottom: 0, left: 0, right: 0 } do
+  img youtube, width: 40, height: 40, margin: 0
+  img other_site, width: 40, height: 40, margin: 0
+end
+
+docx.table [[c2, c3]] do 
+  cell_style cells, width: 8000, align: 'center' 
+  cell_style rows[0], margins: { top: 0, bottom: 0, left: -100, right: -100 } 
+  cell_style cols[0], width: 8000, margins: { top: 0, bottom: 0, left: -100, right: -100 } 
+  cell_style cells[1], background: '#d6d6d6'
+end
+
+docx.table [[c4, c5]] do
+  cell_style cells, width: 8000, align: 'center'
+end
+
+website = @customer.website
+docx.h5 align: 'center' do
+  link "#{website}", "#{website}"
+end 
+
+phone = @customer.phone
+docx.h5 "#{phone}", align: 'center'

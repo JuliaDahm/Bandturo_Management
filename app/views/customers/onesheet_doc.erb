@@ -1,0 +1,154 @@
+<body id='customer-show'>
+  <div class="container header align-center center">
+    <h1><a href="#" class="logo">Bandturo</a></h1>
+    <p>Tour Booking for Independent Musicians</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col s6 l6">
+        <h4><%= @customer.band_name %></h4>
+      </div>
+      <div class="col s3 l3">
+        <%= link_to "See One Sheet", onesheet_customer_path(@customer) %>
+      </div>
+      <div class="col s3 l3">
+        <%= link_to "Download One Sheet", onesheet_doc_customer_path(@customer) %>
+      </div>
+    </div>
+    <hr />
+    <h5>Artist Info</h5>
+    <p>Address: <%= @customer.address1 %></p>
+    <p>Address 2: <%= @customer.address2 %></p>
+    <p>City: <%= @customer.city %></p>
+    <p>State: <%= @customer.state %></p>
+    <p>Zipcode: <%= @customer.zip %></p>
+    <p>Country: <%= @customer.country %></p>
+    <p>Phone: <%= @customer.phone %></p>
+    <p>Email: <%= @customer.email %></p>
+    <p>Depart Date: <%= @customer.depart %></p>
+    <p>Return Date: <%= @customer.return %></p>
+    <p>Importance(Money): <%= @customer.money %></p>
+    <p>Importance(Experience): <%= @customer.experience %></p>
+    <p>Website: <%= @customer.website %></p>
+    <p>Soundcloud: <%= @customer.soundcloud %></p>
+    <p>Bandcamp: <%= @customer.bandcamp %></p>
+    <p>Other Site: <%= @customer.other_site %></p>
+    <p>Artist Bio: <%= @customer.artist_bio %></p>
+    <p>Sounds Like 1: <%= @customer.sounds_like1 %></p>
+    <p>Sounds Like 2: <%= @customer.sounds_like2 %></p>
+    <p>Sounds Like 3: <%= @customer.sounds_like3 %></p>
+    <p>Press Link 1: <%= @customer.press_link1 %></p>
+    <p>Press Link 2: <%= @customer.press_link2 %></p>
+    <p>Press Link 3: <%= @customer.press_link3 %></p>
+    <% if @customer.main_photo.exists? %>
+      <%= image_tag(@customer.main_photo, class: "customer-show-photos") %>
+    <% end %>
+    <% if @customer.live_photo.exists? %>
+      <%= image_tag(@customer.live_photo, class: "customer-show-photos") %>
+    <% end %>
+        <% if @customer.logo.exists? %>
+      <%= image_tag(@customer.logo, class: "customer-show-photos") %>
+    <% end %>
+        <% if @customer.misc_photo1.exists? %>
+      <%= image_tag(@customer.misc_photo1, class: "customer-show-photos") %>
+    <% end %>
+        <% if @customer.misc_photo2.exists? %>
+      <%= image_tag(@customer.misc_photo2, class: "customer-show-photos") %>
+    <% end %>
+    <hr />
+    <h5>Upsells</h5>
+    <p>Interested in Press: <% if @customer.press_interest == true %>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in Posters: <% if @customer.poster_interest ==true%>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in FB Events: <% if  @customer.event_interest == true %>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in Social Media Advertising: <% if @customer.advert_interest == true %>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in Band Photos: 
+      <% if @customer.products_photos == true %>
+        Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in Poster Design: 
+      <% if @customer.products_posters == true %>
+        Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in Recording: 
+      <% if @customer.products_recording == true %>
+        Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in Mastering: <% if @customer.products_mastering == true %>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in Renting Equipment: <% if @customer.products_live_equipment == true %>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in a Loan: <% if @customer.products_loan == true %>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in Music Videos: <%if  @customer.products_video == true%>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in Mixing: <%if @customer.products_mixing == true %>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interest in Workshops: <% if @customer.products_workshops == true %>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in Studio Equipment: <% if @customer.products_studio_equipment ==true %>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+    <p>Interested in Ticket Sales: <% if @customer.products_tickets == true %>
+      Yes
+      <% else %>
+        No
+      <% end %>
+    </p>
+  </div>
+</body>
