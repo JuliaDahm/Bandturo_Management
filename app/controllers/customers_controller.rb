@@ -30,7 +30,7 @@ class CustomersController < ApplicationController
 
   def onesheet_doc
     respond_to do |format|
-      format.docx { headers["Content-Disposition"] = "attachment; filename=\"#{@customer.band_name}_One_Sheet.docx\"", render action: 'show'}
+      format.docx { headers["Content-Disposition"] = "attachment; filename=\"#{@customer.band_name}_One_Sheet.docx\""}
     end
   end 
 
