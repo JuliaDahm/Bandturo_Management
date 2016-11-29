@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :customer, only: [:show, :onesheet, :onesheet_doc]
+  before_action :customer, only: [:show, :onesheet_doc]
 
   def index
     @customers = Customer.all
@@ -26,6 +26,7 @@ class CustomersController < ApplicationController
   end
 
   def onesheet
+    @customer = Customer.where(band_name: params[:band_name]).first
   end
 
   def onesheet_doc
