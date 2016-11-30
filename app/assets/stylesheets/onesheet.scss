@@ -1,13 +1,6 @@
 @import "materialize";
 
 
-//**************Permanent*************//
-
-
-
-//*************Free to change*********//
-
-
 // Background//
 
 #onesheet {
@@ -56,7 +49,15 @@
 // Side Photos //
 
 #onesheet .side-photos {
+
 }
+
+// Bio //
+
+.artist-bio p {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 
 // Misc Photo 1 //
 
@@ -91,6 +92,13 @@
 
 #onesheet .one-sheet-icon {
   padding: 0;
+}
+
+
+// Phone //
+
+.phone {
+  font-family: 'Cabin', sans-serif;
 }
 
 

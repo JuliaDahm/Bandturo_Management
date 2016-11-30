@@ -9,7 +9,7 @@
         <h4><%= @customer.band_name %></h4>
       </div>
       <div class="col s3 l3">
-        <%= link_to "See One Sheet", onesheet_customer_path(@customer) %>
+        <%= link_to "See One Sheet", onesheet_path(@customer.band_name.parameterize) %>
       </div>
       <div class="col s3 l3">
         <%= link_to "Download One Sheet", docx_customer_path(@customer) %>

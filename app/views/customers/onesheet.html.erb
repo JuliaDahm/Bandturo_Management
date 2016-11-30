@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col s12 l12">
+      <div class="col s12 l12 artist-bio">
         <p class="center"><%= @customer.artist_bio %></p>
       </div>
     </div>
@@ -64,7 +64,7 @@
       <div class="col s12 l12 center">
         <h5><%= link_to("#{@customer.website}", "#{@customer.website}") %></h5>
         <% if @customer.phone != nil %>
-            <h5><%= "#{@customer.phone}" %></h5>
+            <h5 class="phone"><%= "#{@customer.phone}" %></h5>
         <% end %>
       </div>
     </div>

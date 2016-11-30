@@ -26,7 +26,8 @@ class CustomersController < ApplicationController
   end
 
   def onesheet
-    @customer = Customer.where(band_name: params[:band_name]).first
+    @customer = Customer.parameterized_search(params[:band_name]).first
+    raise ActionController::RoutingError.new('Not Found') if @customer.nil?
   end
 
   def onesheet_doc
