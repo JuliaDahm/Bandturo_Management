@@ -35,7 +35,7 @@ c2 = Caracal::Core::Models::TableCellModel.new  margins: { top: 0, bottom: 0, le
   img misc_photo2, width: 140, height: 100
 end
 
-news = image_url('news-icon.png')
+news = image_url("https://s3.amazonaws.com/bandturomanagement/news-icon.png")
 row1 = @customer.press_link1
 row2 = @customer.press_link2
 row3 = @customer.press_link3
@@ -48,15 +48,15 @@ c3 = Caracal::Core::Models::TableCellModel.new margins: { top: 0, bottom: 0, lef
   end 
 end
 
-soundcloud = image_url('soundcloud-icon.png')
-bandcamp = image_url('bandcamp-icon.png')
+soundcloud = image_url("https://s3.amazonaws.com/bandturomanagement/soundcloud-icon.png")
+bandcamp = image_url("https://s3.amazonaws.com/bandturomanagement/bandcamp-icon.png")
 c4 = Caracal::Core::Models::TableCellModel.new margins: { top: 0, bottom: 0, left: 0, right: 0 } do
   img soundcloud, width: 40, height: 40, margins: {top: 0, bottom: 0, left: 200, right: 0}
   img bandcamp, width: 40, height: 40, margins: {top: 0, bottom: 0, left: 200, right: 0}
 end
 
-youtube = image_url('youtube-icon.png')
-other_site = image_url('other-site-icon.png')
+youtube = image_url("https://s3.amazonaws.com/bandturomanagement/youtube-icon.png")
+other_site = image_url("https://s3.amazonaws.com/bandturomanagement/other-site-icon.png")
 c5 = Caracal::Core::Models::TableCellModel.new margins: { top: 0, bottom: 0, left: 0, right: 0 } do
   img youtube, width: 40, height: 40, margin: 0
   img other_site, width: 40, height: 40, margin: 0

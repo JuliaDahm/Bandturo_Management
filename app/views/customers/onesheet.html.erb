@@ -33,7 +33,7 @@
       </div>
       <div class="one-sheet-press-links col s4 l4">
         <% if @customer.press_link1 != nil %>
-          <h5><%= image_tag("news-icon.png", style: "width: 10%;") %> PRESS</h5>
+          <h5><%= image_tag("https://s3.amazonaws.com/bandturomanagement/news-icon.png", style: "width: 10%;") %> PRESS</h5>
           <%= link_to("#{@customer.press_link1}", "#{@customer.press_link1}") %>
           <%= link_to("#{@customer.press_link2}", "#{@customer.press_link2}") %>
           <%= link_to("#{@customer.press_link3}", "#{@customer.press_link3}") %>
@@ -43,18 +43,18 @@
         <div class="col s12 l12 one-sheet-icons">
           <div class="col s5 l5 one-sheet-icon">
             <% if @customer.soundcloud != nil %>
-              <%= link_to image_tag("soundcloud-icon.png", width: "60%;"), "#{@customer.soundcloud}", title: "#{@customer. soundcloud}" %>
+              <%= link_to image_tag("https://s3.amazonaws.com/bandturomanagement/soundcloud-icon.png", width: "60%;"), "#{@customer.soundcloud}", title: "#{@customer. soundcloud}" %>
             <% end %>
             <% if @customer.youtube != nil %>
-              <%= link_to image_tag("youtube-icon.png", width: "60%;"), "#{@customer.youtube}", title: "#{@customer.youtube}"   %>
+              <%= link_to image_tag("https://s3.amazonaws.com/bandturomanagement/youtube-icon.png", width: "60%;"), "#{@customer.youtube}", title: "#{@customer.youtube}"   %>
             <% end %>
           </div>
           <div class="col s5 l5 one-sheet-icon">
             <% if @customer.bandcamp != nil %>
-              <%= link_to image_tag("bandcamp-icon.png", width: "60%;"), "#{@customer.bandcamp}", title: "#{@customer. bandcamp}" %>
+              <%= link_to image_tag("https://s3.amazonaws.com/bandturomanagement/bandcamp-icon.png", width: "60%;"), "#{@customer.bandcamp}", title: "#{@customer. bandcamp}" %>
             <% end %> 
             <% if @customer.other_site != nil %>
-              <%= link_to image_tag("other-site-icon.png", width: "60%;"), "#{@customer.other_site}", title: "#{@customer. other_site}" %>
+              <%= link_to image_tag("https://s3.amazonaws.com/bandturomanagement/other-site-icon.png", width: "60%;"), "#{@customer.other_site}", title: "#{@customer. other_site}" %>
             <% end %>
           </div>
         </div>
