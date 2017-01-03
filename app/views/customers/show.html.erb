@@ -40,21 +40,11 @@
     <p>Press Link 1: <%= @customer.press_link1 %></p>
     <p>Press Link 2: <%= @customer.press_link2 %></p>
     <p>Press Link 3: <%= @customer.press_link3 %></p>
-    <% if @customer.main_photo.exists? %>
-      <%= image_tag(@customer.main_photo, class: "customer-show-photos") %>
-    <% end %>
-    <% if @customer.live_photo.exists? %>
-      <%= image_tag(@customer.live_photo, class: "customer-show-photos") %>
-    <% end %>
-        <% if @customer.logo.exists? %>
-      <%= image_tag(@customer.logo, class: "customer-show-photos") %>
-    <% end %>
-        <% if @customer.misc_photo1.exists? %>
-      <%= image_tag(@customer.misc_photo1, class: "customer-show-photos") %>
-    <% end %>
-        <% if @customer.misc_photo2.exists? %>
-      <%= image_tag(@customer.misc_photo2, class: "customer-show-photos") %>
-    <% end %>
+    <%= image_tag @customer.main_photo.url, class: "customer-show-photos" %>
+    <%= image_tag @customer.live_photo.url, class: "customer-show-photos" %>
+    <%= image_tag @customer.logo.url, class: "customer-show-photos" %>
+    <%= image_tag @customer.misc_photo1.url, class: "customer-show-photos" %>
+    <%= image_tag @customer.misc_photo2.url, class: "customer-show-photos" %>
     <hr />
     <h5>Upsells</h5>
     <p>Interested in Press: <% if @customer.press_interest == true %>

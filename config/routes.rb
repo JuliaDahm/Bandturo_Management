@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'about/index'
+
   get ':band_name' => 'customers#onesheet', as: :onesheet, constraints: lambda { |request| Customer.parameterized_search(request.path_parameters[:band_name]).any? }
   resources :thanks
   resources :welcome
