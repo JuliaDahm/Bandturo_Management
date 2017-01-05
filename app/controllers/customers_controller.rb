@@ -15,7 +15,7 @@ class CustomersController < ApplicationController
     @customer = Customer.create(customer_params)
     respond_to do |format|
       if @customer.save
-        # CustomerMailer.admin_email(@customer).deliver_later 
+        CustomerMailer.admin_email(@customer).deliver_later 
           format.html { redirect_to(thanks_path, notice: 'User was successfully created.') }
           format.json { render json: @customer, status: :created, location: @customer }
         else
