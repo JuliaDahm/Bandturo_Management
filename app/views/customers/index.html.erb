@@ -9,7 +9,12 @@
     <div class="row">
       <% @customers.each do |c| %>
         <div class="band_links col s4 l4 offset-by-6">
-          <p><%= link_to "#{c.band_name.upcase}", customer_path(c) %></p>
+        	<div class="col s6 l6">
+          	<p><%= link_to "#{c.band_name.upcase}", customer_path(c) %></p>
+          </div>
+          <div class="col s6 l6"> 
+          	<p><%= button_to "X", customer_path(c), method: :delete, class: "delete-button" %></p>
+          </div>
         </div>
       <% end %>
     </div>

@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :customer, only: [:show, :onesheet_doc]
+  before_action :customer, only: [:show, :onesheet_doc, :destroy]
 
   def index
     @customers = Customer.all
@@ -23,6 +23,11 @@ class CustomersController < ApplicationController
           format.json { render json: @customer.errors, status: :unprocessable_entity }
         end
     end 
+  end
+
+  def destroy
+    @customer.destroy
+    redirect_to customers_path
   end
 
   def onesheet
