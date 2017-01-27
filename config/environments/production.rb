@@ -69,19 +69,20 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.perform_deliveries = true
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.serve_static_assets = false
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'  
   config.action_mailer.default_url_options = { :host => 'bandturomanagement.heroku.com' }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default :charset => "utf-8" 
   config.action_mailer.smtp_settings = {
   address: "smtp.gmail.com",
   port: 587,
-  domain: "gmail.com",
-  authentication: :login,
+  domain: "bandturomanagement.heroku.com",
+  authentication: :plain,
   enable_starttls_auto: true,
   user_name: ENV["SMTP_USERNAME"],
   password: ENV["SMTP_PASSWORD"] 
