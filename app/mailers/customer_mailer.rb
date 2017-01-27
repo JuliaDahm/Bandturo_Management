@@ -3,6 +3,7 @@ class CustomerMailer < ApplicationMailer
 
   def admin_email(customer)
     @customer = customer
-    mail(to: ENV["SMTP_USERNAME"], subject: "Bandturo ~ #{@customer.band_name} Form Submission")
+    mail(to: "martingawlak@gmail.com", subject: "Bandturo ~ #{@customer.band_name} Form Submission")
   end 
 end
+
