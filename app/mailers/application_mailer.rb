@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'booking@bandturo.com'
+  default from: ENV["SMTP_USERNAME"]
   layout 'mailer'
 end
