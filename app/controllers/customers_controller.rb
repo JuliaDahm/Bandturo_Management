@@ -31,6 +31,8 @@ class CustomersController < ApplicationController
   end
 
   def onesheet
+  	@missing_logo_url = "https://s3.amazonaws.com/bandturomanagement/missing-logo.png"
+  	@missing_image_url = "https://s3.amazonaws.com/bandturomanagement/missing-image.png"
     @customer = Customer.parameterized_search(params[:band_name]).first
     raise ActionController::RoutingError.new('Not Found') if @customer.nil?
   end

@@ -14,10 +14,18 @@
 
 .one-sheet-logo,
 .one-sheet-sounds-like {
-  margin-top: 30px;
+  margin-top: 30px; 
 }
 
-.one-sheet-logo {
+body .one-sheet-logo {
+	margin-bottom: 10%;
+}
+
+.one-sheet-logo h1 {
+	font-family: 'Petit Formal Script', cursive;
+  font-size: 37pt;
+  font-weight: 300;
+	margin-top: 20px;
 }
 
 
@@ -25,6 +33,7 @@
 
 #onesheet .one-sheet-main-photo {
   padding: 0;
+  margin-top: -125px;
 }
 
 #onesheet .one-sheet-main-photo img {
@@ -36,8 +45,22 @@
 
 
 .one-sheet-sounds-like h5 {
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18pt;
+	font-weight: 200;
+	color: #616161;
+	line-height: 120%;
   text-decoration: underline;
-  padding-top: 80px;
+  padding-top: 70px;
+}
+
+.one-sheet-sounds-like li {
+  font-family: 'Oswald', sans-serif;
+	font-size: 14pt;
+	font-weight: 200;
+	color: #616161;
+	line-height: 150%;
 }
 
 .one-sheet-sounds-like h5,
@@ -54,22 +77,27 @@
 
 // Bio //
 
+.artist-bio {
+	background-color: #fff;
+}
+
 .artist-bio p {
   font-family: 'Josefin Sans', sans-serif;
+  padding: 15px 0 15px 0;
 }
 
 
 // Misc Photo 1 //
 
 #misc_photo1 {
-  padding-top: 30px;
+
 }
 
 // Misc Photo 2 (Bottom Left) //
 
 #onesheet .one-sheet-misc-2 {
-  align-content: center;
-  padding-right: 0;
+  // align-content: center;
+  // padding-right: 0;
 }
 
 // Press Links //
@@ -80,14 +108,18 @@
   padding: 0;
 }
 
+#onesheet .press-link-triangle {
+	height: 150px;
+  padding: 0;
+}
+
 #onesheet .press-links-row {
-  padding-left: 40px;
+  // padding-left: 40px;
 }
 
 // Icons //
 
 #onesheet .one-sheet-icons {
-  padding: 0;
 }
 
 #onesheet .one-sheet-icon {
@@ -99,6 +131,7 @@
 
 .phone {
   font-family: 'Cabin', sans-serif;
+  padding-top: 10px;
 }
 
 

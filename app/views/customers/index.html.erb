@@ -13,10 +13,16 @@
           	<p><%= link_to "#{c.band_name.upcase}", customer_path(c) %></p>
           </div>
           <div class="col s6 l6"> 
-          	<p><%= button_to "X", customer_path(c), method: :delete, class: "delete-button" %></p>
+          	<p><%= button_to "Delete", customer_path(c), method: :delete, class: "delete-button" %></p>
           </div>
         </div>
       <% end %>
     </div>
   </div>
 </body>
+
+
+	
+
+
+

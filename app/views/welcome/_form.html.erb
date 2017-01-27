@@ -129,10 +129,10 @@
   <div class="lower-row file-field input-field col s12 l12">
     <div class="btn file-button">
       <span>File</span>
-      <%= f.file_field :main_photo %>
+      <%= f.file_field :main_photo, required: true %>
     </div>
     <div class="file-path-wrapper">
-        <input class="file-path validate" type="text" placeholder= "Upload an image that represents your band.">
+        <input class="file-path validate" type="text" placeholder= "Upload an image to be used as the band's main photo.">
     </div>
   </div>
 
