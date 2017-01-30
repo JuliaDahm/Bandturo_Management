@@ -7,12 +7,7 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-<<<<<<< HEAD
-  
-=======
-  config.active_support.deprecation = :notify
 
->>>>>>> 7399cdec9b0d10bbcdf18f8ec2805f1cc7e7c29e
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   config.assets.js_compressor = :uglifier
@@ -24,15 +19,11 @@ Rails.application.configure do
   config.logger = Logger.new(STDOUT)
   config.logger.level = Logger::DEBUG
 
-<<<<<<< HEAD
+
 
   config.i18n.fallbacks = true
 
   config.active_support.deprecation = :notify
-=======
-  config.i18n.fallbacks = true
-
->>>>>>> 7399cdec9b0d10bbcdf18f8ec2805f1cc7e7c29e
 
 
   config.log_formatter = ::Logger::Formatter.new
